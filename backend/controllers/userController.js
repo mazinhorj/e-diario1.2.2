@@ -1,13 +1,14 @@
-const { User: UserModel } = require('../models/User');
+const User = require('../models/User');
 
 const userController = {
-  add: async (req, res) => {
+  create: async (req, res) => {
     try {
       const { name, email, cpf, password, ac_level, stat } = req.body;
-      //console.log(req.body);
-      await UserModel.create({ name, email, cpf, password, ac_level, stat });
+      await User.create({ name, email, cpf, password, ac_level, stat })
+        // .then(res.staus(201).jason({ msg: 'Usuário cadastrado com sucesso!' }));
+        console.log(req.body);
     } catch (error) {
-
+      console.log(error)
     }
   }
 }
