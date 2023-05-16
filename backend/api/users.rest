@@ -2,10 +2,14 @@ POST http://localhost:3000/api/users/create
 Content-Type: application/json
 
 {
-"name": "Teste", 
+"name": "Teste4", 
 "email": "teste@teste.com", 
 "password": "123456", 
 "cpf": 12345678910, 
 "ac_level": 2,
 "stat": 3
 }
+
+###
+
+GET http://localhost:3000/api/users
